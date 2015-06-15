@@ -1,0 +1,17 @@
+<h1>Users Index</h1>
+{{#link-to 'users.new'}}New User{{/link-to}}
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th></th>
+	</tr>
+	{{#each user in model}}
+	<tr>
+		<td>{{#link-to 'users.show' user}}{{user.name}}{{/link-to}}</td>
+		{{#unless user.deleted_at}}
+		<td><button {{action 'deleteUser' user}}>Delete User</button></td>
+		{{/unless}}
+	</tr>
+	{{/each}}
+</table>

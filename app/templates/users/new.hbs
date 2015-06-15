@@ -1,0 +1,14 @@
+<h2>Add a new User</h2>
+<form {{action "createUser" on="submit"}}>
+  <p>
+    <label>Name:
+      {{input value=model.name}}
+    </label>
+  </p>
+  <p>
+    <label>Date of Birth:
+      {{input type="date" value=model.dob}}
+    </label>
+  </p>
+  <input type="submit" value="Save"/>
+</form>
