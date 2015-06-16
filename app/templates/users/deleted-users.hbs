@@ -6,10 +6,8 @@
 		<th>Name</th>
 	</tr>
 	{{#each user in model}}
-	{{#if user.deleted_at}}
 	<tr>
 		<td>{{#link-to 'users.show' user}}{{user.name}}{{/link-to}}</td>
 	</tr>
-	{{/if}}
 	{{/each}}
 </table>
