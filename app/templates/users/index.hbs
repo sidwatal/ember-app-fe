@@ -7,11 +7,9 @@
 		<th></th>
 	</tr>
 	{{#each user in model}}
-	{{#unless user.deleted_at}}
 	<tr>
 		<td>{{#link-to 'users.show' user}}{{user.name}}{{/link-to}}</td>
 		<td><button {{action 'deleteUser' user}}>Delete User</button></td>
 	</tr>
-	{{/unless}}
 	{{/each}}
 </table>
