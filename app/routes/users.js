@@ -6,10 +6,8 @@ export default Ember.Route.extend({
   },
   actions: {
     deleteUser: function(user) {
-    	var _this = this;
-  	 	user.destroyRecord().then(function(){
-  	 		_this.transitionTo('users.index');
-  	 	})
+  	 	user.destroyRecord()
+      this.refresh();
   	}
   }
 });
